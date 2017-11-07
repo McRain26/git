@@ -39,7 +39,7 @@ class Background():
     def __init__(self, ct_settings, screen):
         self.screen = screen
 
-        self.image = pygame.image.load('assets/background11.jpg')
+        self.image = pygame.image.load('assets/background.jpg')
         self.rect = self.image.get_rect()
 
         self.rect.bottom = ct_settings.height
