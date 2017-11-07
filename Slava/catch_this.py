@@ -31,7 +31,7 @@ while True:
     gf.check_events(bonus, ct_settings, enemies, friends, play_button, player, sb, stats)
     if stats.game_active:
         player.update()
-        gf.update_enemies(clock, ct_settings, enemies, friends, player, sb, stats)
+        gf.update_enemies(bonus, clock, ct_settings, enemies, friends, player, sb, stats)
         gf.update_friends(ct_settings, clock, sb, stats, player, friends)
         gf.update_bonus(bonus, clock, ct_settings, player, sb, stats)
     gf.update_screen(background, bonus, ct_settings, sb, screen, stats, play_button, player, friends, enemies)

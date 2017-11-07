@@ -11,7 +11,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Slava$main.coverage" NAME="main Coverage Results" MODIFIED="1509961645126" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Slava$catch_this__1_.coverage" NAME="catch_this (1) Coverage Results" MODIFIED="1510058858528" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Slava$catch_this__1_.coverage" NAME="catch_this (1) Coverage Results" MODIFIED="1510062294204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Slava$catch_this.coverage" NAME="catch_this Coverage Results" MODIFIED="1509369405212" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../Python/games_book/catch_this" />
     <SUITE FILE_PATH="coverage/Slava$button.coverage" NAME="button Coverage Results" MODIFIED="1510038258549" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Slava$game_fuction.coverage" NAME="game_fuction Coverage Results" MODIFIED="1510038267770" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -21,8 +21,8 @@
       <file leaf-file-name="catch_this.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/catch_this.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="410">
+              <caret line="33" column="33" lean-forward="false" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -40,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="game_fuction.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="game_fuction.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/game_fuction.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="111" column="52" lean-forward="false" selection-start-line="111" selection-start-column="52" selection-end-line="111" selection-end-column="52" />
+            <state relative-caret-position="70">
+              <caret line="106" column="0" lean-forward="true" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -65,14 +65,14 @@
       <file leaf-file-name="game_objects.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game_objects.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="41" column="57" lean-forward="false" selection-start-line="41" selection-start-column="57" selection-end-line="41" selection-end-column="57" />
+            <state relative-caret-position="510">
+              <caret line="32" column="21" lean-forward="true" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stats.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="stats.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stats.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
@@ -115,8 +115,9 @@
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/stats.py" />
         <option value="$PROJECT_DIR$/settings.py" />
-        <option value="$PROJECT_DIR$/game_fuction.py" />
         <option value="$PROJECT_DIR$/game_objects.py" />
+        <option value="$PROJECT_DIR$/catch_this.py" />
+        <option value="$PROJECT_DIR$/game_fuction.py" />
       </list>
     </option>
   </component>
@@ -586,6 +587,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/stats.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scoreboard.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -594,10 +603,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game_fuction.py">
+    <entry file="file://$PROJECT_DIR$/catch_this.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="111" column="52" lean-forward="false" selection-start-line="111" selection-start-column="52" selection-end-line="111" selection-end-column="52" />
+        <state relative-caret-position="410">
+          <caret line="33" column="33" lean-forward="false" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
@@ -606,27 +615,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/game_objects.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="41" column="57" lean-forward="false" selection-start-line="41" selection-start-column="57" selection-end-line="41" selection-end-column="57" />
+        <state relative-caret-position="510">
+          <caret line="32" column="21" lean-forward="true" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/catch_this.py">
+    <entry file="file://$PROJECT_DIR$/game_fuction.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="70">
+          <caret line="106" column="0" lean-forward="true" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stats.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>

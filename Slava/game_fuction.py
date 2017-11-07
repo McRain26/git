@@ -86,12 +86,13 @@ def update_friends(ct_settings, clock, sb, stats, player, friends):
     process_friends(clock, friends, ct_settings)
     check_friend_collisions(ct_settings, sb, stats, player, friends)
 
-def process_delete_friends(friends, ct_settings):
-    for m in list(friends):
+def process_delete(ct_settings, objects):
+    """Процесс удаления объектов вышедших за экран"""
+    for m in list(objects):
         if (m.rect.right < 0 or
                 m.rect.left > ct_settings.width or
                 m.rect.bottom > ct_settings.height):
-            friends.remove(m)
+            objects.remove(m)
 
 def process_friends(clock, friends, ct_settings):
     """Процесс создания новых друзей"""
@@ -102,18 +103,7 @@ def process_friends(clock, friends, ct_settings):
     else:
         ct_settings.current_cooldown_friends -= clock.get_time()
     #Проверка краев, экрана, если за ними, то удалить друга
-    process_delete_friends(friends, ct_settings)
-
-def process_delete_enemies(ct_settings, enemies):
-    """Процесс удаления врагов вышедших за экран"""
-    for m in list(enemies):
-        if (m.rect.right < 0 or
-                m.rect.left > ct_settings.width or
-                m.rect.bottom > ct_settings.height):
-            enemies.remove(m)
-
-def increase_points(ct_settings):
-    ct_settings.friend_points += 50
+    process_delete(ct_settings, friends)
 
 def increase_speed(clock, ct_settings, sb, stats):
     """Увеличивает скорость объектов на экране"""
@@ -122,11 +112,11 @@ def increase_speed(clock, ct_settings, sb, stats):
         ct_settings.speed_bonus += 3
         ct_settings.max_speed_player += 2
         ct_settings.current_increase_speed_time = ct_settings.increase_speed_time
-        ct_settings.current_cooldown_enemies -= 10
-        ct_settings.current_cooldown_friends -= 10
+        ct_settings.current_cooldown_enemies -= 15
+        ct_settings.current_cooldown_friends -= 15
         stats.level += 1
         sb.prep_level()
-        increase_points(ct_settings)
+        ct_settings.friend_points += 50 * stats.level
     else:
         ct_settings.current_increase_speed_time -= clock.get_time()
 
@@ -151,19 +141,10 @@ def process_enemies(clock, ct_settings, enemies, sb, stats):
     else:
         pause_enemy(clock, ct_settings, stats)
     # Проверка краев, экрана, если за ними, то удалить врага
-    process_delete_enemies(ct_settings, enemies)
+    process_delete(ct_settings, enemies)
     increase_speed(clock, ct_settings, sb, stats)
 
-def update_enemies(clock, ct_settings, enemies, friends, player, sb, stats):
-    """Обновляет позиции врагов"""
-    process_enemies(clock, ct_settings, enemies, sb, stats)
-    enemies.update()
-    # Проверка коллизий "игрок-враг"
-    player_and_enemies = pygame.sprite.spritecollide(player, enemies, True)
-    if player_and_enemies:
-        player_hit(enemies, friends, sb, stats)
-
-def player_hit(enemies, friends, sb, stats):
+def player_hit(bonus, enemies, friends, player, sb, stats):
     """Обрабатывает столкновение игрока с врагом"""
     if stats.players_left > 0:
         stats.players_left -= 1
@@ -172,18 +153,22 @@ def player_hit(enemies, friends, sb, stats):
 
         enemies.empty()
         friends.empty()
-
+        bonus.empty()
+        player.center_player()
+        sleep(0.5)
     else:
        stats.game_active = False
        pygame.mouse.set_visible(True)
 
-def process_delete_bonus(bonus, ct_settings):
-    """Процесс удаление бонусов"""
-    for m in list(bonus):
-        if (m.rect.right < 0 or
-                m.rect.left > ct_settings.width or
-                m.rect.bottom > ct_settings.height):
-            bonus.remove(m)
+
+def update_enemies(bonus, clock, ct_settings, enemies, friends, player, sb, stats):
+    """Обновляет позиции врагов"""
+    process_enemies(clock, ct_settings, enemies, sb, stats)
+    enemies.update()
+    # Проверка коллизий "игрок-враг"
+    player_and_enemies = pygame.sprite.spritecollide(player, enemies, True)
+    if player_and_enemies:
+        player_hit(bonus, enemies, friends, player, sb, stats)
 
 def process_bonus(bonus, clock, ct_settings):
     """Процесс создания новых бонусов"""
@@ -194,7 +179,7 @@ def process_bonus(bonus, clock, ct_settings):
     else:
         ct_settings.current_cooldown_bonus -= clock.get_time()
     # Проверка краев, экрана, если за ними, то удалить врага
-    process_delete_bonus(bonus, ct_settings)
+    process_delete(ct_settings, bonus)
 
 def check_bonus_collisions(bonus, ct_settings, sb, stats, player):
     """Коллизия бонус-игрок"""
